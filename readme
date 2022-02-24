@@ -1,0 +1,19 @@
+p2p.py uses python3
+
+To initialise Peers use: 'python3 p2p.py init PEER FIRSTSUCCESSOR SENCONDSUCCESSOR PINGINTERVAL'
+
+To join a new Peer: 'python3 p2p.py join PEER KNOWNPEER PINGINTERVAL'
+    Note: Only works if atleast one ping request has been sent out
+
+To quit greacefully: type 'quit' in the respective Peer's terminal
+
+To quit abruptly: press ctrl+c in the respective Peer's terminal
+
+To store a file: type 'store FILENAME' in the respective Peer's terminal
+    Note: Only works if the FILENAME % 256 is in range of smallest Peer and largest peer - inclusive
+
+To request a file: type 'request FILENAME' in the respective Peer's terminal
+    Note: Only works if the FILENAME already exists
+
+General Note:
+* Sometimes the TCPClient fails to send msgs - best action to type ctrl+c in that terminal
